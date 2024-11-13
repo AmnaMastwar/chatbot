@@ -1,0 +1,547 @@
+{
+  "1": {
+    "name": "Admissions",
+    "children": {
+      "1.1": {
+        "name": "How can I apply for admission?",
+        "answer": "To apply for admission, visit the university's admissions portal https://ue.edu.pk/admissions/2024/instructions"
+      },
+      "1.2": {
+        "name": "What are the Admission Requirements of UOE?",
+        "children":{
+        "1.2.1":{
+          "name": "Admission Requirements for Mphil ",
+          "answer": "For Mphil: Minimum CGPA 2.5 out of 4.0 in the semester system or 2nd division in the annual system in MA/BS/English or Equivalent degree is required to be eligible for admission in M.Phil. However, preference will be given to candidates who studied linguistics as specialized courses.Applicants are also required to pass UE Entry Test."
+        },
+        "1.2.2":{
+          "name": "Admission Requirements for Bechlor Science",
+          "answer": "1st year passed students of FA / FSc or equivalent are eligible to apply for admission in BS (4 years) programs.The final year result awaited students of FA / FSc or equivalent are required to enter 1st year marks (i.e. Obtained marks / Total marks).The students with complete results of FA / FSc or equivalent will enter their complete result."
+        }
+      }
+      },
+      "1.3": {
+        "name": "What is the criteria of study that UOE is offering?", 
+        "answer": "The University has divided its study programs into semesters each spanning to six months. Students study their courses, prepare assignments, and also do preparation for exams within a semester and later on they participate in exams at end of each semester."
+      },
+      "1.4": {
+        "name": "From Where Can I Get the Information about UOE Admission?",
+        "answer": "You can get the information about UOE admission from any of the following sources: 1. Advertisements through Print Media. 2. Advertisements through Electronic Media. 3. UOE Website: https://www.ue.edu.pk/"
+      },
+      "1.5": {
+         "name": "What is the total number of seats allocated for each department at the University of Education?",
+         "children":{
+           "1.5.1": {
+            "name": "Lower Mall Campus",
+            "children":{
+             "1.5.1.1":{
+              "name":"Department of Economics & Business Administration",
+              "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             } ,
+             "1.5.1.2":{
+              "name":"Department of Education",
+               "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             },
+             "1.5.1.3":{
+              "name":"Department of English",
+               "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             },
+             "1.5.1.4":{
+              "name":"Department of History",
+               "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             },
+             "1.5.1.5":{
+              "name":"Department of Urdu",
+               "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             },
+             "1.5.1.6":{
+              "name":"Department of Zoology",
+               "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             },
+             "1.5.1.7":{
+              "name": "Department of STEM Education", 
+              "answer":"A total of 50 seats are available for both the morning and evening sessions."
+             } 
+            }  
+         },
+         "1.5.2": {
+          "name":"Attock campus",
+          "children":{
+           "1.5.2.1":{
+             "name":"Department of Chemistry",
+              "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.2":{
+             "name":"Department of Education",
+              "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.3":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.4":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.5":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.6":{
+            "name":"Department of Physics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           },
+           "1.5.2.7":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+           }
+          }
+         },
+         "1.5.3":{
+          "name":"Bank Road Campus Lahore",
+          "children":{
+          "1.5.3.1":{
+           "name":"Department of History",
+            "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.2":{
+            "name":"Department of Botany",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.3":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.4":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.5":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.6":{
+            "name":"Department of Fine Arts",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.7":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.8":{
+            "name":"Department of Urdu",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.9":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.3.10":{
+            "name":"Department of Chemistry",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          }
+        }
+         },
+         "1.5.4":{
+          "name":"Dera Ghazi Khan Campus",
+          "children":{
+          "1.5.4.1":{
+            "name":"Department of Botany",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.2":{
+            "name":"Department of Chemistry",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.3":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.4":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.5":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.6":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.7":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.8":{
+            "name":"Department of Physics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.4.9":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          }
+        }
+         },
+         "1.5.5":{
+          "name":"Faisalabad campus",
+          "children":{
+          "1.5.5.1":{
+            "name":"Department of Special Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.2":{
+            "name":"Department of Botany",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.3":{
+            "name":"Department of Chemistry",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.4":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.5":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.6":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.7":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.8":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.9":{
+            "name":"Department of Physics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.10":{
+            "name":"Department of Urdu",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.11":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.12":{
+            "name":"UE Business School",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.5.13":{
+            "name":"Department of Economics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          }
+        }
+         },
+         "1.5.6":{
+          "name":"Jauharabad Campus",
+          "children":{
+          "1.5.6.1":{
+            "name":"Department of Chemistry",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.2":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.3":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.4":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.5":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.6":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.7":{
+            "name":"Department of Physics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.8":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.6.9":{
+            "name":"Department of Botany",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          }
+        }
+         },
+         "1.5.7":{
+          "name":"Vehari Campus",
+          "children":{
+          "1.5.7.1":{
+            "name":"Department of Chemistry",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.2":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.3":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.4":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.5":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.6":{
+            "name":"Department of Physics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.7":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.8":{
+            "name":"Department of Botany",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.7.9":{
+            "name":"Department of Zoology",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          }
+        }
+         },
+         "1.5.8": {
+          "name": "Multan campus",
+          "children":{
+          "1.5.8.1":{
+            "name":"Department of Economics & Business Administration",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.8.2":{
+            "name":"Department of Education",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.8.3":{
+            "name":"Department of English",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.8.4":{
+            "name":"Department of Information Sciences",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+          },
+          "1.5.8.5":{
+            "name":"Department of Mathematics",
+             "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.6":{
+          "name":"Department of Physics",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.7":{
+          "name":"Department of Chemistry",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.8":{
+          "name":"Department of Zoology",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.9":{
+          "name":"Department of Islamic Studies",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.10":{
+          "name":"Department of History",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         },
+         "1.5.8.11":{
+          "name":"UE Business School",
+           "answer":"A total of 50 seats are available for both the morning and evening sessions."
+         }
+        }
+         }
+        }
+      },
+      "1.6": {
+        "name": "When Admission In MS/M.Phil & P.hD Admissions Will be Open?",
+        "answer": "Admission in MS/M.Phil & P.hD programs are opened once a year."
+      },
+      "1.7": {
+        "name": "What is the process of admissions in the Merit based program?",
+        "answer": "Merit based programs eligibility and processing detail are available on the UOE website link (https://www.ue.edu.pk)."
+      },
+      "1.8": {
+        "name": "How I can get admission?",
+        "answer": "Dear applicant, UOE offers two methods for admissions processing. The first method is online method through Online Application System (OAS) available on UOE website (https://www.ue.edu.pk). The second method is to apply through the manual/ printed admission application form (Prospectus) which are available in the respective prospectus of the programs."
+       }
+      }
+  },
+  "2": {
+    "name": "Finance",
+    "children": {
+      "2.1": {
+        "name": "How can I pay UOE fee?",
+        "answer": "Through Banks: Visit any branch of Punjab Bank for submitting of fee."
+      },
+      "2.2":{
+        "name":"Does the University of Education offer fee installment plans for students?",
+        "answer":"Yes, the University of Education offers fee installment plans, but these are not available for first-semester students."
+      },
+      "2.3": {
+        "name": "How can I apply for refund of fee?",
+        "answer": "Download refund application from UOE website, fill it and dispatch the same at the address given on the refund application."
+      },
+      "2.4": {
+        "name": "When I will receive my refund?",
+        "answer": "The refund process starts after finalization of admissions. The estimated time for processing of refund is 30 days. You will receive refund cheque at the address you have given on your admission form, approximately after 30 days of date of refund application."
+      },
+      "2.5": {
+        "name": "What is the deadline for applying the refund?",
+        "answer": "The eligible students can apply for refund before the start of study period as per Academic Calendar available on the UOE website. The ineligible students can apply for refund within one year of fee deposit date."
+      },
+      "2.6": {
+        "name": "Are there payment plans available for tuition fees?",
+        "answer": "University of Education offers installment plans that allow students to pay their tuition fees over several months. Contact the finance office to inquire about the available plans and deadlines for installment payments."
+      },
+      "2.7": {
+        "name": "What additional fees do I need to pay apart from tuition?",
+        "answer": "In addition to tuition fees, students may need to pay other fees such as registration fees, lab fees, examination fees, or student activity fees. It’s important to check the full fee structure for your program to be aware of all potential costs."
+      },
+      "2.8": {
+        "name": "How can I check my fee balance and payment history?",
+        "answer": "You can check your fee balance and payment history by logging into the university's student portal, where your financial information is updated."
+      },
+      "2.9": {
+        "name": "What is the fee structure of regular programs?",
+        "answer": "Please visit the link https://ue.edu.pk/home/Prospectus/FeeStructure"
+      },
+      "2.10": {
+        "name": "What happens if I miss the fee payment deadline?",
+        "answer": "If you don’t pay on time, the university might charge late fees."
+      }
+    }
+  },
+  "3": {
+    "name": "Examination",
+    "children": {
+      "3.1": {
+        "name": "When shall exams commence?",
+        "answer": "The general schedule of exams for each semester is as follows: Spring Semester: January-May, Fall Semester: August-December. However, the dates may be changed due to some operational reasons. Students are advised to confirm the examination dates from their respective Regional Offices or Controller of Examinations before the above dates."
+      },
+      "3.2": {
+        "name": "How to check in my result?",
+        "answer": "Once the Results are declared, the students can view their result on student university portal."
+      },
+      "3.3": {
+        "name": "What is the passing criteria?",
+        "answer": "50% marks is mandatory to pass any course."
+      },
+      "3.4": {
+        "name": "How can I improve my division?",
+        "answer": "You can improve your division by repeating a course. When you repeat a course, the new grade replaces the old one, which can significantly raise your GPA."
+      },
+      "3.5": {
+        "name": "What is the process for repeating a course?",
+        "answer": "To repeat a course, students need to follow the university's guidelines. Typically, if you fail a course or wish to improve your grade, you can re-register for the course in the next available semester. The new grade from the repeated course will replace the old grade in your GPA calculation, which can help improve your division. However, you may need to pay additional fees for retaking the course."
+      },
+      "3.6": {
+        "name": "What is the process for freezing a semester?",
+        "answer": "To freeze a semester, students must submit a formal request to the university administration, usually through the student affairs or registrar’s office. This process involves filling out a semester freeze form and providing a valid reason, such as medical issues, financial difficulties, or personal circumstances."
+      },
+      "3.7": {
+        "name": "What happens if I arrive late to an exam?",
+        "answer": "Arriving late may result in restricted time to complete the exam, and in some cases, you may not be allowed to enter the exam room. It's best to arrive early to avoid this situation."
+      },
+      "3.8": {
+        "name": "Are there any penalties for cheating during exams?",
+        "answer": "Universities take academic dishonesty very seriously. Penalties can include failing the exam, failing the course, or even expulsion from the university."
+      },
+      "3.9": {
+        "name": "Will there be a review session before the exam?",
+        "answer": "Many instructors hold review sessions before exams."
+      },
+      "3.10": {
+        "name": "How do I know which room my exam is in?",
+        "answer": "Exam room assignments are usually posted on the university’s website or sent to students via email/their class groups. Check the exam schedule for your specific room."
+      }
+    }
+  },
+  "4": {
+    "name": "Scholarships",
+    "children": {
+      "4.1": {
+        "name": "What are the scholarships opportunities at UOE?",
+        "answer": "UOE provides many scholarships for students including HEC-based, Kinship, Merit-based, and many more."
+      },
+      "4.2": {
+        "name": "Is multiple scholarships allowed?",
+        "answer": "A student can only take one scholarship at a time. In any situation where a student takes two scholarships, one scholarship must be refunded by the student."
+      },
+      "4.3": {
+        "name": "Are scholarships available in both morning and evening programs?",
+        "answer": "Some scholarships are available for both morning and evening students, but a few, like the kinship scholarship, are offered only for morning students."
+      },
+      "4.4": {
+        "name": "How can I apply for a scholarship at the University of Education?",
+        "answer": "You can apply for a scholarship through the university’s official website or the financial aid office. The university usually announces the opening of scholarship applications at the start of each semester. Make sure to meet all eligibility criteria and submit the required documents before the deadline."
+      },
+      "4.5": {
+        "name": "What are the eligibility criteria for scholarships?",
+        "answer": "The eligibility criteria for scholarships vary depending on the type of scholarship. Generally, scholarships are awarded based on academic performance, financial need, extracurricular activities, or special talents. Some scholarships may also require a specific GPA, community service, or other criteria."
+      },
+      "4.6": {
+        "name": "What documents are required to apply for a scholarship?",
+        "answer": "Typically, you will need to submit an academic transcript, proof of financial need (if applicable), a completed application form, and letters of recommendation. Some scholarships may also require an essay or personal statement explaining why you deserve the scholarship."
+      },
+      "4.7": {
+        "name": "How will I be notified if I am awarded a scholarship?",
+        "answer": "Scholarship recipients are typically notified via email or through the university's student portal. The financial aid office will also send official communication detailing the scholarship amount and any conditions that must be met to maintain it."
+      },
+      "4.8": {
+        "name": "What happens if my GPA drops after receiving a scholarship?",
+        "answer": "Many scholarships have academic performance requirements, such as maintaining a minimum GPA. If your GPA drops below the required level, you may lose the scholarship."
+      },
+      "4.9": {
+        "name": "Can I lose my scholarship if I take a semester break or freeze a semester?",
+        "answer": "Freezing a semester may affect your scholarship status, as many scholarships require continuous enrollment. It's important to check with the financial aid office and review the terms of your scholarship to understand if taking a break will lead to the loss of financial support."
+      }
+    }
+  },
+  "5": {
+    "name": "Facilities",
+    "children": {
+      "5.1": {
+           "name":" Does the University of Education offer hostel facilities for students?",
+           "answer":" Yes, the University of Education offers hostel facilities, but availability may vary depending on the campus and the number of seats. Priority is often given to out-of-town students. For more details on the specific campus and the hostel admission process, you should check with the university administration."
+        },
+        "5.2":{
+          "name":" Does the University of Education provide transport facilities for students?",
+          "answer":"Yes, the University of Education provides transport facilities for students. However, the availability of transport services may vary depending on the campus. Students can apply for the transport service at the time of admission, and transport routes generally cover major areas around the campus. For details on routes and fees, it's best to contact the transport office at the respective campus."
+        },
+        "5.3":{
+          "name":"Does the University of Education have canteen facilities for students?",
+          "answer":"Yes, the University of Education has canteen facilities on its campuses. The canteen provides students with a variety of food and drink options at reasonable prices. It’s a convenient place for students to grab meals, snacks, and refreshments during their breaks. The quality and range of food may vary depending on the campus, but the canteen is generally designed to meet the daily needs of students and staff."
+        },
+        "5.4":{
+          "name":"Does the University of Education have a stationery shop on campus?",
+          "answer":"Yes, the University of Education typically has a stationery shop on most of its campuses. The shop provides essential items such as notebooks, pens, pencils, and other study materials that students may need for their classes. It’s a convenient option for students to quickly purchase supplies without leaving the campus. The range of items and availability may vary depending on the specific campus."
+        },
+        "5.5":{
+          "name":"Does the University of Education have a library for students?",
+          "answer":"Yes, the University of Education has well-equipped libraries on its campuses, providing students access to a wide range of academic resources. The library offers textbooks, reference materials, research papers, and access to digital databases."
+        }
+
+    }
+  }
+  
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Application</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chatbot.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-section">
+            <h1>UE Chatbot</h1>
+        </div>
+    
+        <!-- Tabs for switching between Menu-Based and AI-Based chatbot -->
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('menu')">Menu Based Chatbot</button>
+            <button class="tab-button" onclick="showTab('ai')">AI Based Chatbot</button>
+        </div>
+    
+        <!-- Content for Menu-Based Chatbot -->
+        <div id="menu" class="tab-content">
+            <h2 style="display: flex; align-items: center; justify-content: space-between;">
+                Menu Based Chatbot 
+                <i class="fas fa-download download-icon" ></i> <!-- Adjusted margin for icon -->
+            </h2>
+            <div id="chat-box" class="chat-box">
+                <div id="messages"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="menu-input" placeholder="Enter your option (1, 2, 3...)" />
+                <i class="fas fa-paper-plane send-icon" onclick="processMenuInput()"></i>
+            </div>
+        </div>
+    
+        <!-- Content for AI-Based Chatbot -->
+        <div id="ai" class="tab-content" style="display: none;">
+            <h2>AI Based Chatbot</h2>
+            <div id="ai-chat-box" class="chat-box">
+                <div id="ai-messages"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="ai-input" placeholder="Type Your Question" />
+                <i class="fas fa-paper-plane send-icon" onclick="processAIChatbot()"></i>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    fetchMenuOptions();
+    
+    // Add Enter key event listener for input processing
+    const menuInput = document.getElementById("menu-input");
+    if (menuInput) {
+        menuInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") { // Check if Enter key is pressed
+                processMenuInput();
+            }
+        });
+    }
+    
+    // Add click event listener for the plane icon
+    const planeIcon = document.getElementById("plane-icon");
+    if (planeIcon) {
+        planeIcon.addEventListener("click", processMenuInput);
+    }
+});
+
+let isChoosingSubcategory = false;
+let selectedMainCategoryIndex = null;
+
+async function fetchMenuOptions() {
+    try {
+        const response = await fetch('/api/menu-options/');
+        if (!response.ok) {
+            throw new Error('Failed to fetch menu options: ' + response.statusText);
+        }
+        const menuOptions = await response.json();
+        displayMenuOptions(menuOptions);
+    } catch (error) {
+        displayMessage('Error fetching menu options: ' + error.message, 'bot');
+    }
+}
+
+function displayMenuOptions(menuOptions) {
+    const messagesContainer = document.getElementById('messages');
+    if (!messagesContainer) {
+        console.error('Messages container not found!');
+        return;
+    }
+    messagesContainer.innerHTML = ""; // Clear previous messages
+    
+    menuOptions.forEach((option, index) => {
+        const optionMessage = document.createElement('div');
+        optionMessage.innerText = `Press ${index + 1} for ${option.name}`;
+        messagesContainer.appendChild(optionMessage);
+    });
+
+    // Reset state when displaying main menu
+    isChoosingSubcategory = false;
+    selectedMainCategoryIndex = null;
+}
+
+async function processMenuInput() {
+    const userInput = document.getElementById("menu-input").value.trim();
+
+    // Validate user input
+    if (!userInput || isNaN(userInput) || userInput <= 0) {
+        displayMessage('Please enter a valid option number.', 'bot');
+        return;
+    }
+
+    // Display user input with icon
+    displayMessage(userInput, 'user');
+
+    // If currently in subcategory selection mode
+    if (isChoosingSubcategory && selectedMainCategoryIndex !== null) {
+        await fetchSubcategoryResponse(userInput);
+    } else {
+        // Main menu selection mode
+        await fetchMainCategoryResponse(userInput);
+    }
+
+    // Clear input field
+    document.getElementById("menu-input").value = "";
+}
+
+async function fetchMainCategoryResponse(userInput) {
+    try {
+        console.log("Sending user input:", userInput);  // Debug log
+        const response = await fetch('/api/process-input/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userInput: userInput }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Error response: ' + response.statusText);
+        }
+
+        const result = await response.json();
+        console.log("Result from API:", result);  // Debug log
+        displayMessage(result.message, 'bot');
+
+        // Check if subcategories are present
+        if (result.subcategories && result.subcategories.length > 0) {
+            const subMenuContainer = document.createElement('ul');
+            result.subcategories.forEach((sub, index) => {
+                const subItem = document.createElement('p');
+                // Create a <strong> element for the bold number
+                const boldNumber = document.createElement('strong');
+                boldNumber.innerText = `${index + 1}`;
+                // Create the text node for the subcategory name
+                const subText = document.createTextNode(` : ${sub.name}`);
+                // Append the bold number and the text to the list item
+                subItem.appendChild(boldNumber);
+                subItem.appendChild(subText);
+                subMenuContainer.appendChild(subItem);
+            });
+
+            // Display the sub-menu in a new message
+            const subMenuMessage = document.createElement('div');
+            subMenuMessage.appendChild(subMenuContainer);
+            document.getElementById("messages").appendChild(subMenuMessage);
+            
+            // Set state for subcategory selection
+            isChoosingSubcategory = true;
+            selectedMainCategoryIndex = parseInt(userInput) - 1;
+        }
+    } catch (error) {
+        displayMessage('Error processing input: ' + error.message, 'bot');
+    }
+}
+
+let currentCategoryPath = []; // Initialize the global path tracker
+async function fetchSubcategoryResponse(subcategoryInput) {
+    try {
+        console.log("Sending subcategory input:", subcategoryInput);
+        
+        // Send the request to the backend with the current category path
+        const response = await fetch('/api/process-subcategory-input/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                mainCategoryIndex: selectedMainCategoryIndex,
+                subcategoryInput: subcategoryInput,
+                currentCategoryPath: currentCategoryPath
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Error response: ' + response.statusText);
+        }
+
+        const result = await response.json();
+        displayMessage(result.message, 'bot');
+
+        // Display details if available
+        if (result.details) {
+            displayMessage('Details: ' + result.details, 'bot');
+        }
+
+        // Display subchildren if available
+        if (result.subchildren && result.subchildren.length > 0) {
+            const subchildrenContainer = document.createElement('ul');
+            result.subchildren.forEach((child, index) => {
+                const childItem = document.createElement('li');
+                childItem.innerText = `${index + 1}. ${child.name}`;
+                subchildrenContainer.appendChild(childItem);
+            });
+            document.getElementById("messages").appendChild(subchildrenContainer);
+
+            // Update the current path to track the category selection
+            currentCategoryPath.push({ index: selectedMainCategoryIndex, subcategoryInput });
+        } else {
+            // Reset if no further subcategories
+            isChoosingSubcategory = false;
+            selectedMainCategoryIndex = null;
+            currentCategoryPath = []; // Reset the path tracker
+        }
+    } catch (error) {
+        displayMessage('Error processing subcategory input: ' + error.message, 'bot');
+    }
+}
+
+
+function displayMessage(message, sender) {
+    const messagesContainer = document.getElementById('messages');
+    const messageDiv = document.createElement('div');
+
+    // Create an icon element based on the sender
+    const icon = document.createElement('i');
+    icon.className = sender === 'bot' ? 'fa-solid fa-robot' : 'fa-solid fa-user';
+    icon.style.color = sender === 'bot' ? '#ffdf00cc' : '#2B5740';
+    icon.style.marginRight = '5px';
+    icon.style.verticalAlign = 'middle';
+    icon.style.fontSize = '20px';
+
+    // Format the message to handle newlines and make URLs clickable
+    const formattedMessage = message
+        .replace(/\n/g, '<br/>')  // Replace newlines with <br/>
+        .replace(/([0-9]+\.)/g, '<div style="margin-left: 2px;">$1')
+        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color: #0066cc;">$1</a>');  // Make URLs clickable
+
+    // Append icon before the message text
+    messageDiv.innerHTML = `<span>${icon.outerHTML}</span><span>${formattedMessage}</span>`;
+
+    // Append the formatted message to the messages container
+    messagesContainer.appendChild(messageDiv);
+
+    // Scroll to the latest message
+    scrollToBottom();
+}
+
+
+function scrollToBottom() {
+    const chatBox = document.getElementById('chat-box');
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// JavaScript function to switch between tabs
+function showTab(tabName) {
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        } 
+        
+        function processAIChatbot() {
+            var userInput = document.getElementById("ai-input").value;
+            var message = "You: " + userInput;
+            var response = "You asked: " + userInput + ". The AI is processing your question...";
+            document.getElementById("ai-messages").innerHTML += "<div>" + message + "</div>";
+            document.getElementById("ai-messages").innerHTML += "<div>Bot: " + response + "</div>";
+            document.getElementById("ai-input").value = ""; // Clear input field
+        }
+         
+    </script>
+   
+</body>
+</html>

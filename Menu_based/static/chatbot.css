@@ -1,0 +1,161 @@
+/* Container styling */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 223, 0, 0.8);
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 3px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-section {
+    background-color: #2B5740;
+    height: 80px;
+    border: 3px solid rgb(43, 87, 64);
+    box-shadow: 0 4px 8px rgba(43, 87, 64, 0.8);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+/* Tabs styling */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 2px solid #2B5740;
+    background-color: #2B5740;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px;
+    flex: 1 1 45%; /* Adjust width */
+    margin: 5px; /* Space between buttons */
+}
+
+.tab-button:hover {
+    background-color: rgba(255, 223, 0, 0.8);
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .tab-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Hide tab content initially */
+.tab-content {
+    display: none;
+}
+
+/* Input and icon styling */
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add right padding for icon */
+    border: 2px solid #2B5740;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.send-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #2B5740;
+    font-size: 16px;
+}
+
+/* Responsive adjustments for input container on small screens */
+@media (max-width: 600px) {
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px 35px 8px 8px; /* Adjust padding for smaller screens */
+    }
+    
+    .send-icon {
+        font-size: 14px; /* Smaller icon size */
+        right: 8px; /* Adjust position */
+    }
+}
+
+/* Chat box styling */
+.chat-box {
+    border: 2px solid #2B5740;
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+@media (max-width: 600px) {
+    .chat-box {
+        height: 200px;
+    }
+}
+
+.chat-box div {
+    margin: 5px 0;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.message img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Style for the download icon */
+.download-icon {
+    font-size: 20px; /* Size of the icon */
+    color: #2B5740; /* Color to match the heading */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-right: 8px;
+}
+
+/* Optional: Add hover effect for the download icon */
+.download-icon:hover {
+    color: rgba(255, 223, 0, 0.8);
+    cursor: pointer; /* Change color on hover */
+   
+}
